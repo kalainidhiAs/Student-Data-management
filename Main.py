@@ -20,7 +20,7 @@ address = StringVar()
 enrolment_no = StringVar()
 grade = StringVar()
 
-# Entries Frame
+#entries Frame
 entries_frame = Frame(root, bg="#535c68")
 entries_frame.pack(side=TOP, fill=X)
 
@@ -69,7 +69,7 @@ txtAddress = Text(entries_frame, width=50, height=5, font=("Calibri", 16))
 txtAddress.grid(row=4, column=3, padx=10, pady=10, sticky="w")
 
 
-def getData(event):
+def getData(event):#for update option
     selected_row = tv.focus()
     data = tv.item(selected_row)
     global row
@@ -146,7 +146,7 @@ btnDelete = Button(btn_frame, command=delete_student, text="Delete Details", wid
 btnClear = Button(btn_frame, command=clearAll, text="Clear All", width=15, font=("Calibri", 16, "bold"), fg="white",
                 bg="orange").grid(row=0, column=3,padx=12)
 
-#table frame
+#table frame treeview
 tree_frame = Frame(root, bg="white")
 tree_frame.place(x=0, y=480, width=1980, height=520)
 style = ttk.Style()
